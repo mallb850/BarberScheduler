@@ -1,0 +1,13 @@
+<h3>Find a Barbershop</h3>
+<div class="barber" ng-controller="findCtrl">
+  <div id="search">
+    <form>
+        <input type="search" ng-model="barber.name"/>
+    </form>
+  </div>
+  <div class="col-md-12" ng-repeat="barber in barberShops | filter: barber.name">
+    <h2>{{barber.name}} <p class="rating">Rating: {{barber.rating}} out of 5</p></h2>
+    <p>{{barber.location}}, {{barber.state}}</p>
+    <button class="btn btn-danger butt">Make your Reservation</button><button class="btn btn-danger butt">View Barbershop</button>
+  </div>
+</div>

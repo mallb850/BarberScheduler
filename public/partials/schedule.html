@@ -1,0 +1,52 @@
+
+<div class="container">
+  <h3>Schedule Your Cut</h3>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Event</button>
+
+  <br><br><hr>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Schedule your haircut. </h4>
+        </div>
+        <form action="/schedule/newEvent" method="POST" class="register">
+        <div class="modal-body">
+          <label for="name">Name:</label>
+          <input type='text' name="name">
+          <br>
+          <label for="name">Date:</label>
+          <input type="date" name="date">
+          <br>
+          <label for="name">Comment:</label>
+          <input type="text" name="comment">
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+      </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <div id="calendar" class="fullCalendar" ng-controller="scheduleCtrl">
+    <button type="button" ng-click="anotherFunction()">CLICK FUNCTION</button>
+    <div ng-repeat="info in information">
+        <table>
+          <tr>
+          <th>Name:</th>
+          <td>{{info.name}}</td>
+          <th>Comment:</th>
+          <td>{{info.comment}}</td>
+          <th>Time:</th>
+          <td>{{info.date}}</td>
+      </tr>
+      </table>
+    </div>
+  </div>

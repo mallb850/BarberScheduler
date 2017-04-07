@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="App">
+  <head>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href='/font-awesome/css/font-awesome.min.css'>
+    <link rel="stylesheet" type="text/css" href='/fullcalendar/dist/fullcalendar.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/moment/moment.js"></script>
+    <script src="/fullcalendar/dist/fullcalendar.js"></script>
+    <script src="/scheduler/lib/scheduler.js"></script>
+
+    <!-- Second navbar for profile settings -->
+   <nav class="navbar navbar-inverse">
+     <div class="container">
+       <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">Cut It</a>
+       </div>
+
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse" id="navbar-collapse-4">
+         <ul class="nav navbar-nav navbar-right">
+           <li><a ui-sref="schedule">Schedule Your Cut</a></li>
+           <li><a ui-sref="find">Find a BarberShop</a></li>
+           <li><a class="right" ui-sref="login">Log In</a></li>
+           <li><a class="right" ng-href="/logout" target="_self">Log Out</a></li>
+           <li><a class="right" ui-sref="register">Register</a></li>
+       </div><!-- /.navbar-collapse -->
+     </div><!-- /.container -->
+   </nav><!-- /.navbar -->
+</div><!-- /.container-fluid -->
+
+  <head>
+  <body>
+    <!-- Second navbar for categories -->
+      <!--UIVIEW Rendering-->
+      <div ui-view>
+
+      </div>
+
+  </body>
+  <footer></footer>
+  <!-- Dependencies -->
+  <script src="/angular/angular.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/angularfire/dist/angularfire.min.js"></script>
+
+
+  <!-- Angular App -->
+  <script src="/js/client.js"></script>
+
+  <!-- Controllers -->
+  <script src="/js/scheduleCtrl.js"></script>
+  <script src="/js/findCtrl.js"></script>
+  <script src="/js/loginCtrl.js"></script>
+
+  <!-- Services -->
+
+
+
+</html>
